@@ -8,6 +8,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
      <!-- Fontawasome CDN -->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
   </head>
   <body id="body-element"
     class="w-full bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 min-h-screen flex items-center justify-center p-5"
@@ -30,7 +31,7 @@
           >Enter Rows:</label
         >
         <input
-          class="user-input bg-white p-3 w-full rounded-xl border-2 border-cyan-400 outline-none text-sm mb-5 focus:ring-2 focus:ring-cyan-500"
+          class="user-input bg-white p-3 w-full rounded-xl border-2 border-cyan-400 outline-none text-sm mb-5 focus:ring-2 focus:ring-cyan-500 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
           type="number"
           name="input-rows"
           id="input-rows"
@@ -41,7 +42,7 @@
           >Enter Columns:</label
         >
         <input 
-          class="user-input bg-white p-3 w-full rounded-xl border-2 border-cyan-400 outline-none text-sm mb-5 focus:ring-2 focus:ring-cyan-500"
+          class="[appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none user-input bg-white p-3 w-full rounded-xl border-2 border-cyan-400 outline-none text-sm mb-5 focus:ring-2 focus:ring-cyan-500"
           type="number"
           name="input-cols"
           id="input-cols"
@@ -56,19 +57,19 @@
       </section>
 
       <!-- Editable Routine Table -->
-      <aside class="col-span-12 md:col-span-8 rounded-lg border-2 border-pink-300 p-3 bg-white shadow-lg relative pb-28">
+      <aside class="col-span-12 md:col-span-8 flex flex-col rounded-lg border-2 border-pink-300 p-3 bg-white shadow-lg">
         <section id="routine-parent"
-        class="col-span-12 md:col-span-8 rounded-lg p-5 bg-white shadow-lg hidden"
+        class="pb-5 mb-10 col-span-12 md:col-span-8 rounded-lg p-5 bg-white shadow-lg hidden"
       >
         
       </section>
 
-      <div>
+      <section class="mt-auto col-span-12 max-sm:max-w-lg flex max-sm:flex-col justify-between items-center max-sm:gap-5 max-sm:p-5">
         <button
-          class="absolute bottom-3 right-5 download-btn bg-gradient-to-r from-indigo-500 to-pink-500 text-white py-3 rounded-xl font-semibold shadow-md hover:opacity-90 transition-all px-8"><i class="fa-solid fa-download"></i> Download</button>
+          class="max-sm:w-full download-btn bg-gradient-to-r from-indigo-500 to-pink-500 text-white py-3 rounded-xl font-semibold shadow-md hover:opacity-90 transition-all px-8"><i class="fa-solid fa-download"></i> Download</button>
           <button
-          class="absolute bottom-3 left-5 clear-btn bg-gradient-to-r from-indigo-500 to-pink-500 text-white py-3 rounded-xl font-semibold shadow-md hover:opacity-90 transition-all px-8"><i class="fa-solid fa-trash-can"></i> Clear Routine</button>
-      </div>
+          class=" max-sm:w-full clear-btn bg-gradient-to-r from-indigo-500 to-pink-500 text-white py-3 rounded-xl font-semibold shadow-md hover:opacity-90 transition-all px-8"><i class="fa-solid fa-trash-can"></i> Clear Routine</button>
+      </section>
       </aside>
       
     </main>
